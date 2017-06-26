@@ -16,6 +16,8 @@
 
 - (UIImage *)esCGBlendModeOverlayTintColor:(UIColor *)tintColor;
 
+- (UIImage *)esCGBlendModeOverlayAndCGBlendModeDestinationInTintColor:(UIColor *)tintColor;
+
 - (UIImage *)imageWithTintColor:(UIColor *)tintColor blendMode:(CGBlendMode)blendMode;
 
 @end
