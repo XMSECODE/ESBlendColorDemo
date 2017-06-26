@@ -13,6 +13,7 @@
 		F0115E9C1F0111840080804A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0115E9A1F0111840080804A /* Main.storyboard */; };
 		F0115E9E1F0111840080804A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0115E9D1F0111840080804A /* Assets.xcassets */; };
 		F0115EA11F0111840080804A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0115E9F1F0111840080804A /* LaunchScreen.storyboard */; };
+		F0115EAA1F0112AA0080804A /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = F0115EA91F0112AA0080804A /* UIImage+Tint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		F0115E9D1F0111840080804A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0115EA01F0111840080804A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0115EA21F0111840080804A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0115EA81F0112AA0080804A /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
+		F0115EA91F0112AA0080804A /* UIImage+Tint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				F0115E951F0111840080804A /* AppDelegate.m */,
 				F0115E971F0111840080804A /* ViewController.h */,
 				F0115E981F0111840080804A /* ViewController.m */,
+				F0115EA81F0112AA0080804A /* UIImage+Tint.h */,
+				F0115EA91F0112AA0080804A /* UIImage+Tint.m */,
 				F0115E9A1F0111840080804A /* Main.storyboard */,
 				F0115E9D1F0111840080804A /* Assets.xcassets */,
 				F0115E9F1F0111840080804A /* LaunchScreen.storyboard */,
@@ -151,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0115EAA1F0112AA0080804A /* UIImage+Tint.m in Sources */,
 				F0115E991F0111840080804A /* ViewController.m in Sources */,
 				F0115E961F0111840080804A /* AppDelegate.m in Sources */,
 				F0115E931F0111840080804A /* main.m in Sources */,
@@ -275,6 +281,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S5BVK59226;
 				INFOPLIST_FILE = ESBlendColorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.XMSECODE.ESBlendColorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +294,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = S5BVK59226;
 				INFOPLIST_FILE = ESBlendColorDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.XMSECODE.ESBlendColorDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

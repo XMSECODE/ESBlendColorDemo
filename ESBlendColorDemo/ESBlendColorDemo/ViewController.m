@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "UIImage+Tint.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -16,14 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)didClickRedButton:(id)sender {
+//    UIImage *image = [UIImage imageNamed:@"test_picture"];
+//    UIImage *image = [UIImage imageNamed:@"image"];
+    UIImage *image = [UIImage imageNamed:@"image"];
+    image = [image esCGBlendModeDestinationInTintColor:[UIColor redColor]];
+    self.imageView.image = image;
 }
-
 
 @end
