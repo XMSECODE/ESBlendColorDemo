@@ -12,6 +12,50 @@
 
 
 #pragma mark - Public
+
+- (BOOL)imageIsHaveAlphaChannel {
+    CGImageRef cgimageRef = self.CGImage;
+    CGImageAlphaInfo alphaInfo = CGImageGetAlphaInfo(cgimageRef);
+    switch (alphaInfo) {
+        case kCGImageAlphaNone:
+            NSLog(@"alphaInfo is RGB");
+            return NO;
+            break;
+        case kCGImageAlphaPremultipliedLast:
+            NSLog(@"alphaInfo is RGBA");
+            return YES;
+            break;
+        case kCGImageAlphaPremultipliedFirst:
+            NSLog(@"alphaInfo is ARGB");
+            return YES;
+            break;
+        case kCGImageAlphaLast:
+            NSLog(@"alphaInfo is RGBA");
+            return YES;
+            break;
+        case kCGImageAlphaFirst:
+            NSLog(@"alphaInfo is ARGB");
+            return YES;
+            break;
+        case kCGImageAlphaNoneSkipLast:
+            NSLog(@"alphaInfo is RBGX");
+            return YES;
+            break;
+        case kCGImageAlphaNoneSkipFirst:
+            NSLog(@"alphaInfo is XRBG");
+            return YES;
+            break;
+        case kCGImageAlphaOnly:
+            NSLog(@"No color data, alpha data only");
+            return YES;
+            break;
+        default:
+            NSLog(@"alphaInfo is Unknow");
+            return NO;
+            break;
+    }
+}
+
 - (UIImage *)esCGBlendModeDestinationInTintColor:(UIColor *)tintColor {
     return  [self imageWithTintColor:tintColor blendMode:kCGBlendModeDestinationIn];
 }
@@ -35,6 +79,11 @@
 }
 
 - (UIImage *)imageWithTintColor:(UIColor *)tintColor blendModeOne:(CGBlendMode)blendModeOne blendModeTwo:(int)blendModeTwo {
+    if (![self imageIsHaveAlphaChannel]) {
+        NSLog(@"The image don't have alpha channel");
+        return nil;
+    }
+    
     UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0);
     
     [tintColor setFill];

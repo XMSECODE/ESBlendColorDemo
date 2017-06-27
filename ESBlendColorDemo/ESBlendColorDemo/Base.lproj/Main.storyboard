@@ -23,6 +23,10 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="Ptw-Ba-Bvy">
                                 <rect key="frame" x="113.5" y="259.5" width="148" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="148" id="0LB-Xh-8at"/>
+                                    <constraint firstAttribute="height" constant="148" id="eit-gR-xOM"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vW8-DP-Mqv">
                                 <rect key="frame" x="52.5" y="607" width="30" height="30"/>

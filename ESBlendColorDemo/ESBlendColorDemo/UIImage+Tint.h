@@ -10,6 +10,8 @@
 
 @interface UIImage (Tint)
 
+- (BOOL)imageIsHaveAlphaChannel;
+
 - (UIImage *)esCGBlendModeDestinationInTintColor:(UIColor *)tintColor;
 
 - (UIImage *)esCGBlendModeDestinationOutTintColor:(UIColor *)tintColor;
